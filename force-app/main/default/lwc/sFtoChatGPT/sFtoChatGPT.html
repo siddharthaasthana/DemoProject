@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Chat GPT" icon-name="standard:account">
+        <div class="slds-card_header slds-grid">  
+        </div>
+        <div if:true={isLoaded} class="slds-card_body">{message}</div>
+        <div if:false={isLoaded} class="slds-card_body">
+            <lightning-spinner alternative-text="Loading..." variant="brand">               
+            </lightning-spinner>
+        </div>
+        <div class="slds-grid slds-gutters slds-m-around_small" style="margin: left 6rem;" >
+             <div class="slds-col slds-size_2-of-3">
+              
+               <lightning-input type="string" value={question} onchange={handleOnChange}></lightning-input>
+           </div>
+            <div class="slds-col slds-size_1-of-3">
+                <lightning-button class="slds-button" variant="brand" label="Submit" title="Primary action" onclick={handleOnClick} ></lightning-button>
+            </div>
+        </div>
+    </lightning-card>
+
+   <article class="slds-card" title="Chat GPT">
+   
+    
+   </article>
+</template>
